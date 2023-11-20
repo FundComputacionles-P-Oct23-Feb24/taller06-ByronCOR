@@ -1,0 +1,16 @@
+//Realizar una miniespecificación que permita 
+presentar en pantalla la siguiente secuencia:	
+1/10,2/11,3/12,4/13,5/14,6/15
+
+1.  Inicio
+2.  numerador,i[0-n]<--1
+3.  denominador,i[0-n]<--10
+4.  Mientras numerador <= 6 and denominador <=16 entonces
+5.    <<" "+numerador"/"+denominador
+6.    numerador<--numerador+1
+7.    denominador<--denominador+1
+8.  Fin Mientras
+9.  Fin
+
+
+

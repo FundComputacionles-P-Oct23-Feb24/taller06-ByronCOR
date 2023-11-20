@@ -1,0 +1,35 @@
+Generar una miniespecificación que permita ingresar 4 estudiantes; 
+por cada uno de ellos ingresar el nombre del estudiante, el promedio de ciclo.
+ 
+Presentar el siguiente reporte
+Estudiante 1 con nota 10 es Aprobado 
+Estudiante 2 con nota 6.9 es Reprobado 
+Estudiante 3 con nota 7 es Aprobado 
+Estudiante 4 con nota 5 es Reprobado
+
+Atención; con base al valor del promedio, usted debe asignar en cada registro el tipo Aprobado o Reprobado.
+
+1.  Inicio
+2.  n_alumno,i[0-n]
+3.  nombre_alumno,x(30)[{BS},{a-z},{A-Z}]
+4.  promedio,d[0-n]
+5.  n_alumno<--1
+6.  Mientras n_alumno <= 4 entonces
+7.    <<"Ingrese el nombre del estudiante."
+8.    >>nombre_alumno
+9.    <<"Ingrese el promedio del estudiante."
+10.   >>promedio
+11.   Si promedio >= 7 and promedio <= 10 entonces
+12.     <<"Estudiante "+n_alumno" "+nombre_alumno" con nota "+promedio" es Aprobado"
+13.   De lo contrario
+14.     Si promedio >= 0 and promedio < 7 entonces
+15.       <<"Estudiante "+n_alumno" "+nombre_alumno" con nota "+promedio" es Reprobado"
+16.     Fin Si
+17.   Fin Si
+18.   n_alumno <-- n_alumno + 1
+19. Fin Mientras
+20. Fin
+
+
+
+

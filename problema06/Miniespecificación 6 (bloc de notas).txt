@@ -1,0 +1,37 @@
+Problema 6
+Una empresa de comercialización de computadoras realiza el proceso de 
+venta haciendo un descuento por tipo de cliente: 
+Si es cliente tipo 1 hay un descuento del 10% 
+Si es cliente tipo 2 hay un descuento del 20% 
+En caso que sea otro tipo de cliente, no hay descuento. 
+Generar un proceso que permita ingresar 7 ventas:
+por cada venta preguntar los siguiente datos:
+Nombre del cliente
+Costo de la computadora (solo se vende una computadora por transacción)
+Tipo de cliente 
+Presentar el siguiente reporte: Cliente tipo 1, compra computadora con precio $100*/
+
+1.   Inicio
+2.   tipo_cliente,i[0-4]
+3.   n_ventas,i[0-n]
+4.   nombre_cliente,x(30)[{BS},{A-Z},{a-z}]
+5.   costo_compu,d[0-n]
+6.   n_ventas<--1
+7.   Mientras n_ventas <= 7 entonces
+8.     <<"Ingrese el nombre del cliente."
+9.     >>nombre_cliente
+10.    <<"Ingrese 1, 2, 3 o 4 según el tipo de cliente."
+11.    >>tipo_cliente
+12.    <<"Ingrese el precio de la computadora (venta: 1 computadora por cliente)."
+13.    >>costo_compu
+14.    Si tipo_cliente == 1 entonces
+15.      costo_compu <-- costo_compu - ((costo_compu * 10)/100)
+16.    De lo contrario
+17.      Si tipo_cliente == 2 entonces
+18.        costo_compu <-- costo_compu - ((costo_compu * 20)/100)
+19.      Fin Si
+20.    Fin Si
+21.    <<"Cliente "+nombre_cliente" tipo "+tipo_cliente", compra computadora con precio "+costo_compu
+22.    n_ventas <-- n_ventas + 1
+23.  Fin Mientras
+24.  Fin 

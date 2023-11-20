@@ -1,0 +1,55 @@
+Problema 4
+Generar una solución que permita ingresar jugadores de fútbol; 
+por cada jugador se debe solicitar:
+
+Nombre el jugador
+Posición en el campo de juego
+Edad
+Estatura
+El ciclo de ingreso de información deberá terminar cuando el usuario lo decida. 
+Se debe imprimir el siguiente reporte (usar una cadena de acumulación):
+
+Listado de Jugadores
+1. Alexander Dominguez -Arquero-, edad 32, estatura 1.95
+2. Xavier Arreaga -Defensa-, edad 24, estatura 1.85
+3. Moisés Caicedo -Mediocentro-, edad 19, estatura 1.88
+4. Ángel Mena -Delantero-, edad 32, estatura 1.75
+5. Michael Estrada -Delantero-, edad 27, estatura 1.93
+Promedio de edades:  26.8 
+Promedio de estaturas: 1.87
+
+1.  Inicio
+2.  nombre,x(30)[{A-Z},{a-z},{BS}]
+3.  posicion,x(30)[{A-Z},{a-z},{BS}]
+4.  opcion,x(2)[{A-Z}]
+5.  valorB,l<--true
+6.  edad,i[0-n]
+7.  n_jugadores,i[0-n]<--1
+8.  estatura,d[0-n]
+9.  prom_edad,d[0-n]<--0
+10. prom_estatura,d[0-n]<--0
+11. <<"Listado de Jugadores"
+12. Mientras valorB == true entonces
+13.   <<"Ingrese el nombre del jugador."
+14.   >>nombre
+15.   <<"Ingrese la posicion en el campo del juego."
+16.   >>posicion
+17.   <<"Ingrese la edad del jugador."
+18.   >>edad
+19.   <<"Ingrese la estatura del jugador."
+20.   >>estatura
+21.   prom_edad <-- prom_edad + edad
+22.   prom_estatura <-- prom_estatura + estatura
+23.   <<" "+n_jugadores". "+nombre" -"+posicion"-, edad "+ edad", estatura "+estatura
+24.   n_jugadores <-- n_jugadores + 1
+25.   <<"Para ingresar más información digite: SI, Para terminar el proceso digite: NO"
+26.   >>opcion
+27.   Si opcion == "NO" entonces
+28.     valorB <-- false
+29.   Fin Si
+30. Fin Mientras
+31. prom_edad <-- prom_edad / n_jugadores
+32. prom_estatura <-- prom_estatura / n_jugadores
+33. <<"Promedio de edades: "+prom_edad 
+34. <<"Promedio de estaturas: "+prom_estatura
+35. Fin
